@@ -1,6 +1,14 @@
+.columns {
+  margin-top: 32px;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
+}
+
+.columns a:any-link:not(.button) {
+  font-weight: 700;
 }
 
 .columns img {
