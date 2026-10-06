@@ -138,9 +138,15 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
+  font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
+}
+
+header .nav-brand a:any-link {
+  color: var(--text-color);
 }
 
 header nav .nav-brand img {
@@ -169,7 +175,7 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 header nav .nav-sections .nav-drop > button {
@@ -232,6 +238,11 @@ header nav .nav-sections .nav-drop > button[aria-expanded='false'] + ul {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+  }
+
+  /* align dropdown triggers with plain link items */
+  header nav .nav-sections .nav-drop > button {
+    display: block;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {

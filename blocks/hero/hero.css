@@ -5,16 +5,33 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  min-height: 560px;
+  padding: 40px 24px 48px;
+}
+
+.hero > div,
+.hero > div > div {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero h1,
 .hero p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 720px;
   color: var(--background-color);
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.hero p {
+  font-size: var(--body-font-size-m);
 }
 
 .hero picture {
@@ -31,7 +48,7 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(90deg, rgb(0 0 0 / 60%) 0%, rgb(0 0 0 / 20%) 70%);
+  background: linear-gradient(0deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 20%) 50%, rgb(0 0 0 / 0%) 100%);
 }
 
 .hero img {
@@ -40,8 +57,31 @@
   height: 100%;
 }
 
+.hero p.button-wrapper {
+  margin-top: 24px;
+}
+
+.hero a.button.primary {
+  border-color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.hero a.button.primary:hover,
+.hero a.button.primary:focus-visible {
+  border-color: var(--light-color);
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+.hero a.button.secondary {
+  border-color: var(--background-color);
+  color: var(--background-color);
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: min(720px, calc(100vh - var(--nav-height)));
+    padding: 40px 32px 64px;
   }
 }

@@ -1,4 +1,34 @@
 /* stylelint-disable max-line-length */
+
+/* VW brand fonts, used when installed locally (e.g. on VW machines); otherwise roboto is used */
+@font-face {
+  font-family: vw-head;
+  font-weight: 300;
+  font-display: swap;
+  src: local('VW Head Light'), local('VWHead-Light');
+}
+
+@font-face {
+  font-family: vw-head;
+  font-weight: 700;
+  font-display: swap;
+  src: local('VW Head Bold'), local('VWHead-Bold');
+}
+
+@font-face {
+  font-family: vw-text;
+  font-weight: 400;
+  font-display: swap;
+  src: local('VW Text'), local('VW Text Regular'), local('VWText-Regular');
+}
+
+@font-face {
+  font-family: vw-text;
+  font-weight: 700;
+  font-display: swap;
+  src: local('VW Text Bold'), local('VWText-Bold');
+}
+
 @font-face {
   font-family: roboto-condensed;
   font-style: normal;
